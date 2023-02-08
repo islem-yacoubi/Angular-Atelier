@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let e of ListEmploi; let i = index">
+    <div class="card" style="width: 18rem">
+      <img src="https://www.recruter.tn/wp-content/uploads/2017/09/csdcvfqscsqc.jpg?fbclid=IwAR1GmbRrv8BZ0G2h3QR1UIMYq2eifTGXK3_MqwpT-KHnGnXtBBO57IS6JyE"
+        width="40%"
+        height="40%"
+        class="card-img-top"
+        alt="..."/>
+      <div class="card-body">
+        <h3 class="card-title">{{ e.titre }}</h3>
+        Product N°{{ i }}
+        <h5 class="card-text">reference : {{ e.reference }}</h5>
+        <h5 class="card-text">entreprise : {{ e.entreprise }}</h5>
+        <h5 class="card-text">etat : {{ e.etat }}</h5>
+        <button class="btn btn-primary" [disabled]="e.etat == false">Postuler</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-primary" (click)="calculBilan()">Bilan</button>
+<form>
+  <input type="text" #i>
+  <button type="button" (click)="recherche(i.value)">Chercher</button>
+</form>
