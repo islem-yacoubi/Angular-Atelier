@@ -20,7 +20,7 @@ export class ArticlesComponent implements OnInit {
       {titre:'les nouveaux parents',contenu:'les nouveaux parents',auteur:'Ahmed Said',date:'11/11/2018',categorie:'Education'},
       {titre:'Comment écrire votre CV',contenu:'Pour réussir à décraucher un emploi',auteur:'Mari Elsa',date:'02/04/2017',categorie:'Travail'}
     ];
-    this.totalArticles=this.ListArticles.length;
+    this.totalArticles=this.ListArticles.filter(article=>article.categorie!='Travail').length;
       }
       
     
