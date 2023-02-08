@@ -1,0 +1,12 @@
+<p>Exercice 2</p>
+<div *ngFor ="let article of ListArticles">
+ <div *ngIf="article.categorie!='Travail'" style="border: 1px solid gray; padding: 1px; margin-bottom: 50px; height: 5%; width:30%;"[ngClass]="{'blue-background': article.categorie === 'Education'}">
+  
+ <h6  style="background-color: white; width: 200px; margin-left
+ : 20px; margin-top: -14px;"> {{article.titre}}</h6>
+ <p>Auteur: {{ article.auteur }}</p>
+ <p>Date: {{ article.date}}</p>
+ <p>Contenu :{{ article.contenu}}</p>
+ <div ></div>
+</div>
+</div>
