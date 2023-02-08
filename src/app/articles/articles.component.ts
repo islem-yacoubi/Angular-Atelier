@@ -9,6 +9,8 @@ import { article } from '../Core/model/Articles';
 export class ArticlesComponent implements OnInit {
   titre!:"Les articles du jour";
   ListArticles!:article[];
+  totalArticles !:number;
+
 
   constructor() { }
 
@@ -18,7 +20,9 @@ export class ArticlesComponent implements OnInit {
       {titre:'les nouveaux parents',contenu:'les nouveaux parents',auteur:'Ahmed Said',date:'11/11/2018',categorie:'Education'},
       {titre:'Comment écrire votre CV',contenu:'Pour réussir à décraucher un emploi',auteur:'Mari Elsa',date:'02/04/2017',categorie:'Travail'}
     ];
+    this.totalArticles=this.ListArticles.length;
       }
+      
     
   }
 
